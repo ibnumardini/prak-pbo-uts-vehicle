@@ -13,17 +13,12 @@ public class Utama {
         car.setEngine(carEngine);
         car.setBrand("Toyota Supra MK4");
 
-        System.out.println("Mobil");
-        System.out.println("Bahan bakar: " + car.getFuel());
-        System.out.println("Merek: " + car.getBrand());
-        System.out.println("Jumlah silinder: " + car.getEngine().numberOfCylinders);
-        System.out.println("Kapasitas silinder: " + car.getEngine().cylinderCapacity);
-        System.out.println("Stroke: " + car.getEngine().stroke);
+        printVehicle("Mobil", car);
 
         System.out.println();
 
         Mesin motocycleEngine = new Mesin();
-        motocycleEngine.numberOfCylinders = 1   ;
+        motocycleEngine.numberOfCylinders = 1;
         motocycleEngine.cylinderCapacity = 125;
         motocycleEngine.stroke = 4;
 
@@ -32,11 +27,15 @@ public class Utama {
         motorcycle.setEngine(motocycleEngine);
         motorcycle.setBrand("Honda Supra X 125");
 
-        System.out.println("Sepeda Motor");
-        System.out.println("Bahan bakar: " + motorcycle.getFuel());
-        System.out.println("Merek: " + motorcycle.getBrand());
-        System.out.println("Jumlah silinder: " + motorcycle.getEngine().numberOfCylinders);
-        System.out.println("Kapasitas silinder: " + motorcycle.getEngine().cylinderCapacity);
-        System.out.println("Stroke: " + motorcycle.getEngine().stroke);
+        printVehicle("Sepeda Motor", motorcycle);
+    }
+
+    public static void printVehicle(String type, Vehicle vehicle) {
+        System.out.println(type);
+        System.out.println("Bahan bakar: " + vehicle.getFuel());
+        System.out.println("Merek: " + vehicle.getBrand());
+        System.out.println("Jumlah silinder: " + vehicle.getEngine().numberOfCylinders);
+        System.out.println("Kapasitas silinder: " + vehicle.getEngine().cylinderCapacity);
+        System.out.println("Stroke: " + vehicle.getEngine().stroke);
     }
 }
